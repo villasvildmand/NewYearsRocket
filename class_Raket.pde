@@ -273,8 +273,10 @@ class Raket5 extends Raket {
 
   Raket5() {
     this.pg = createGraphics(width, height, P3D);
+    this.pg.beginDraw(); //Nødvending for at det ikke hakker hver gang raketten springer
+    this.pg.endDraw();
 
-    this.particleCount = (int) random(3, 5);
+    this.particleCount = (int) random(3, 8);
 
     this.particlePositions = new PVector[this.particleCount];
     this.particleVelocities = new PVector[this.particleCount];
@@ -285,7 +287,7 @@ class Raket5 extends Raket {
       this.particlePositions[i] = new PVector(0, 0, 0);
       this.particleVelocities[i] = PVector.random3D().mult(random(1.0, 4.0));
       this.particleColors[i] = color(random(0, 255), random(0, 255), random(0, 255));
-      this.particleRadii[i] = (int) random(10, 40);
+      this.particleRadii[i] = (int) random(5, 20);
     }
   }
 
@@ -301,13 +303,14 @@ class Raket5 extends Raket {
       this.init();
       this.initialized = true;
     }
-
+    
     this.pg.beginDraw();
     this.pg.clear();
     this.pg.noStroke();
-    //this.pg.lights();
-    this.pg.ambientLight(205, 205, 205);
-    this.pg.directionalLight(255, 255, 255, 0, -1, 0);
+
+    this.pg.ambientLight(128, 128, 128);
+    this.pg.directionalLight(200, 200, 200, 0, 1, 0);
+    this.pg.directionalLight(150, 150, 150, 0, -1, 0);
 
     for (int i = 0; i < this.particleCount; i++) {
       //Physics
@@ -331,6 +334,7 @@ class Raket5 extends Raket {
     }
 
     this.pg.endDraw();
+
     image(pg, 0, 0);
     //image(pg, location.x-this.pg.width*0.5, location.y-this.pg.height*0.5);
 

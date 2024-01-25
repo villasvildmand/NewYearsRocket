@@ -35,7 +35,7 @@ void setup() {
 
 
 void draw() {
-  background(205);
+  background(80);
 
   /*r1.flyvRaket();
   r2.flyvRaket();
