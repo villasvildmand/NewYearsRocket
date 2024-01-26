@@ -181,7 +181,7 @@ class Raket3 extends Raket {
   }
 }
 
-class Raket4 extends Raket {
+/*class Raket4 extends Raket {
   boolean init = false;
   PVector[] particlePositions;
   PVector[] particleVelocities;
@@ -257,7 +257,7 @@ class Raket4 extends Raket {
       }
     }
   }
-}
+}*/
 
 class Raket5 extends Raket {
   private boolean initialized = false;
@@ -269,7 +269,6 @@ class Raket5 extends Raket {
   private int[] particleRadii;
 
   private int particleCount;
-
 
   Raket5() {
     this.pg = createGraphics(width, height, P3D);
