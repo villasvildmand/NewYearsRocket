@@ -303,7 +303,7 @@ class Raket5 extends Raket {
       this.init();
       this.initialized = true;
     }
-    
+
     this.pg.beginDraw();
     this.pg.clear();
     this.pg.noStroke();
@@ -319,7 +319,6 @@ class Raket5 extends Raket {
       this.particlePositions[i].add(this.particleVelocities[i]);
 
       //Rendering
-      this.pg.fill(this.particleColors[i]);
 
       this.pg.pushMatrix();
 
@@ -328,6 +327,7 @@ class Raket5 extends Raket {
       this.pg.rotateX(millis()*0.01f);
       this.pg.rotateZ(millis()*0.001f);
 
+      this.pg.fill(this.particleColors[i]);
       this.pg.box(this.particleRadii[i]);
 
       this.pg.popMatrix();
@@ -336,9 +336,5 @@ class Raket5 extends Raket {
     this.pg.endDraw();
 
     image(pg, 0, 0);
-    //image(pg, location.x-this.pg.width*0.5, location.y-this.pg.height*0.5);
-
-    /*fill(255, 0, 0);
-     circle(location.x, location.y, 4);*/
   }
 }

@@ -23,19 +23,19 @@ void setup() {
   r3 = new Raket3();
   r4 = new Raket4();*/
   
-  batteri = new Raket[5];
-  for(int i = 0; i < 5; i++) {
-    /*batteri[i] = new Raket1();
+  batteri = new Raket[20];
+  for(int i = 0; i < 20; i+=4) {
+    batteri[i] = new Raket1();
     batteri[i+1] = new Raket2();
-    batteri[i+2] = new Raket3();*/
-    batteri[i] = new Raket5();
+    batteri[i+2] = new Raket3();
+    batteri[i+3] = new Raket5();
   }
 }
 
 
 
 void draw() {
-  background(80);
+  background(205);
 
   /*r1.flyvRaket();
   r2.flyvRaket();
