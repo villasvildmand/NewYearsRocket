@@ -7,7 +7,6 @@ SoundFile raket2;
 Raket1 r1;
 Raket2 r2;
 Raket3 r3;
-Raket4 r4;
 
 Raket[] batteri;
 
