@@ -181,7 +181,7 @@ class Raket3 extends Raket {
   }
 }
 
-/*class Raket4 extends Raket {
+class Raket4 extends Raket {
   boolean init = false;
   PVector[] particlePositions;
   PVector[] particleVelocities;
@@ -257,9 +257,14 @@ class Raket3 extends Raket {
       }
     }
   }
-}*/
+}
 
-class Raket5 extends Raket {
+/*************************************/
+
+//Virker kun hvis size() indeholder P2D eller P3D: fx size(800, 800, P2D);
+//P2D rendereren kan øge FPS'en, men kan måske få ting til at se lidt anderledes ud.
+
+class Raket5 extends Raket { 
   private boolean initialized = false;
   private PGraphics pg;
 
